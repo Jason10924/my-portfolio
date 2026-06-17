@@ -86,6 +86,36 @@ button:hover {
   flex-wrap: wrap;
 }
 
+.values-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.value-card {
+  background: linear-gradient(135deg, #ffffff, #eef7ff);
+  padding: 25px;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  animation: floatUp 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.value-card:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+.value-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
 .card,
 .project-card {
   background: white;
@@ -113,6 +143,16 @@ button:hover {
   background: navy;
   color: white;
   padding: 20px;
+}
+
+@keyframes floatUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 /* Dark mode */
